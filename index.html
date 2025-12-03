@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nicolas Chialva — Portafolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+
+
+    /* ===========================
+       FULL-SCREEN SECTIONS & SCROLL SNAP
+    =========================== */
+    html, body {
+      height: 100%;
+      scroll-behavior: smooth;
+      scroll-snap-type: y mandatory;
+      overflow-y: scroll;
+    }
+
+    section {
+      min-height: 100vh;
+      scroll-snap-align: start;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .content {
+      max-width: 1100px;
+      margin: 0 auto;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <div class="nav-container">
+    <div class="nav-links">
+      <a href="#inizio" class="nav-item">// Inizio</a>
+      <a href="#competenze" class="nav-item">// Competenze</a>
+      <a href="#progetti" class="nav-item">// Progetti</a>
+      <a href="#esperienza" class="nav-item">// Esperienza</a>
+    </div>
+
+   
+
+    <button class="hamburger" id="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-panel" id="mobilePanel">
+  <a href="#inizio" class="mobile-item">// Inizio</a>
+  <a href="#competenze" class="mobile-item">// Competenze</a>
+  <a href="#progetti" class="mobile-item">// Progetti</a>
+  <a href="#esperienza" class="mobile-item">// Esperienza</a>
+  <a href="#contatto" class="mobile-item">// Contatto</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="inizio">
+  <div class="hero-bg"></div>
+  <div class="content hero-content">
+    <h1 class="hero-name">NICOLAS CHIALVA</h1>
+    <p class="hero-subtitle">Full Stack & App Developer</p>
+    <div class="hero-code">
+      &lt;<span class="hc-name">NicolasChialva</span> src="<a href="https://github.com/nchialva" target="_blank" class="hc-github">GitHub</a>"&gt;<div class="hero-buttons">
+  <a href="assets/cv/NicolasChialva_CV.pdf" download class="hero-btn btn-cv">
+    📄 Scarica CV
+  </a>
+  <div class="hero-btns-bottom">
+    <a href="https://www.linkedin.com/in/nicolas-chialva//" target="_blank" class="hero-btn btn-linkedin">
+      🔗 LinkedIn
+    </a>
+     <button id="btnAbout" class="hero-btn">
+    <i class="fa-solid fa-user"></i> 👤 Su di me
+  </button>
+  </div>
+</div>
+    </div>
+    <div class="scroll-down" id="scrollDown"><span></span></div>
+  </div>
+ <div id="aboutModal" class="modal">
+  <div class="modal-content">
+    <span id="aboutClose" class="modal-close">&times;</span>
+    <div class="modal-right">  
+      <h3>Chi sono</h3>
+            <p>
+              Sono <strong>Nicolás Chialva</strong> e ho appena completato un <strong>Master in Sviluppo Web e Mobile</strong> presso <strong>MasterD</strong>, specializzandomi nello sviluppo <strong>Back-End con JavaScript, Node.js</strong> e database <strong>NoSQL come MongoDB</strong>, oltre a competenze front-end e altre tecnologie come Flutter, Java, Swift, Kotlin, PHP, SQL e Python.
+            </p>
+            <p>
+              Sono sempre stato appassionato di tecnologia: ho iniziato a esplorare questo interesse lavorando in <strong>Banco Santander</strong>, dove ho ottenuto il ruolo di Team Leader & Project Manager, gestendo conti corporate e coordinando progetti complessi di digitalizzazione.  
+              Poco dopo ho approfondito le mie competenze in <strong>Itaú Unibanco</strong>, supervisionando l’implementazione di sistemi tecnologici e progetti innovativi per grandi clienti corporate.
+            </p>
+            <p>
+              Nel 2022 mi sono trasferito a <strong>Madrid, Spagna</strong> e ho lavorato in <strong>Workcenter</strong> come <strong>Client Solutions Specialist – Digital Projects</strong>, progettando e implementando soluzioni digitali personalizzate per clienti chiave.
+            </p>
+            <p>
+              Oggi mi dedico allo sviluppo di applicazioni web e soluzioni <strong>Full Stack</strong>, con particolare attenzione al <strong>Back-End JavaScript/Node.js e MongoDB</strong>, combinando esperienza aziendale e competenze tecniche per creare prodotti digitali efficaci e orientati ai risultati. 🚀
+            </p>
+
+    </div>
+  </div>
+</div>
+
+
+
+  <div class="hero-skills-bar">
+  <div class="skills-track">
+    <div class="skills-loop">
+    <img src="assets/images/iconsFront/html.png" alt="HTML" title="HTML">
+          <img src="assets/images/iconsFront/css.png" alt="CSS" title="CSS">
+          <img src="assets/images/iconsFront/js.png" alt="JavaScript" title="JavaScript">
+          <img src="assets/images/iconsFront/react.png" alt="React" title="React">
+          <img src="assets/images/iconsFront/angular.png" alt="Angular" title="Angular">
+          <img src="assets/images/iconsFront/vue.png" alt="Vue" title="Vue">
+          <img src="assets/images/iconsFront/bootstrap.png" alt="Bootstrap" title="Bootstrap">
+           <img src="assets/images/iconsBack/php.png" alt="PHP" title="PHP">
+          <img src="assets/images/iconsBack/node.png" alt="Node.js" title="Node.js">
+          <img src="assets/images/iconsBack/sql.png" alt="MySQL" title="MySQL">
+          <img src="assets/images/iconsBack/wordpress.png" alt="WordPress" title="WordPress">
+          <img src="assets/images/iconsBack/joomla.png" alt="Joomla" title="Joomla">
+          <img src="assets/images/iconsBack/mongodb.png" alt="MongoDB" title="MongoDB">
+          <img src="assets/images/iconsMobile/flutter.png" alt="Flutter" title="Flutter">
+          <img src="assets/images/iconsMobile/kotlin.png" alt="Android" title="Android">
+          <img src="assets/images/iconsMobile/swift.png" alt="iOS" title="iOS">
+   
+    </div>
+  </div>
+</div>
+</section>
+
+
+
+
+<!-- COMPETENZE -->
+<section class="section" id="competenze">
+  <div class="content">
+    <h2 class="competenze-title">// Competenze</h2>
+
+
+    <!-- PRIMERA FILA - MASTER -->
+    <div class="comp-row">
+      <div class="comp-text">
+        <h3><strong>Master in Programmazione Web e Sviluppo Mobile</strong></h3>
+        <p class="comp-sub">Master D, Spagna, 2024-2025</p>
+        <p class="comp-desc">
+            Ho acquisito competenze avanzate nello sviluppo <strong>web e mobile full stack</strong>, 
+            lavorando con tecnologie come <strong>HTML, CSS, JavaScript, PHP, SQL, React, Node.js, MongoDB</strong> e <strong>Flutter</strong>.  
+            Il master mi ha fornito una visione completa del ciclo di vita di un progetto digitale, 
+            dall’idea iniziale alla messa in produzione, integrando anche aspetti di <strong>intelligenza artificiale</strong> e <strong>mobile business</strong>.
+        </p>
+      </div>
+
+      <div class="comp-buttons">
+        <a href="certificados/master.pdf" class="cert-btn" download>Certificato</a>
+        <a href="#" data-lightbox-target="skillsLightbox" class="skills-btn">Skills</a>
+      </div>
+    </div>
+
+    <!-- SECONDA FILA - SCRUM MASTER -->
+    <div class="comp-row">
+      <div class="comp-text">
+        <h3><strong>Scrum Master</strong></h3>
+        <p class="comp-sub">Master D, Spagna, 2025</p>
+        <p class="comp-desc">
+          Durante questo corso ho approfondito i principi dell’agilità e del framework Scrum, 
+          imparando a facilitare team di sviluppo, a gestire backlog e sprint e a ottimizzare 
+          la collaborazione tra stakeholder e sviluppatori. Ho acquisito le competenze necessarie 
+          per guidare progetti complessi verso risultati concreti e di valore.
+        </p>
+      </div>
+
+      <div class="comp-buttons">
+        <a href="certificados/scrum.pdf" class="cert-btn" download>Certificato</a>
+      </div>
+    </div>
+
+    <!-- TERZA FILA - LAUREA AMMINISTRAZIONE -->
+    <div class="comp-row">
+      <div class="comp-text">
+        <h3><strong>Laurea in Amministrazione aziendale</strong></h3>
+        <p class="comp-sub">UCA, Buenos Aires, Argentina, 2010-2013</p>
+        <p class="comp-desc">
+          Il corso mi ha fornito solide basi nella gestione aziendale, contabilità, finanza e strategia d’impresa. 
+          Ho sviluppato capacità analitiche e decisionali, fondamentali per comprendere i processi organizzativi 
+          e supportare la crescita sostenibile di aziende e progetti digitali.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- LIGHTBOX SKILLS -->
+  <div id="skillsLightbox" class="lightbox">
+    <div class="lightbox-content">
+      <!-- Botón de cierre universal -->
+      <span class="close-lightbox">&times;</span>
+
+      <h2 class="lightbox-title">Skills</h2>
+
+      <div class="skills-columns">
+        <div class="skill-column">
+          <h4>Front-End</h4>
+          <div class="column-icons">
+            <img src="assets/images/iconsFront/html.png" alt="HTML" title="HTML">
+            <img src="assets/images/iconsFront/css.png" alt="CSS" title="CSS">
+            <img src="assets/images/iconsFront/js.png" alt="JavaScript" title="JavaScript">
+            <img src="assets/images/iconsFront/react.png" alt="React" title="React">
+            <img src="assets/images/iconsFront/angular.png" alt="Angular" title="Angular">
+            <img src="assets/images/iconsFront/vue.png" alt="Vue" title="Vue">
+            <img src="assets/images/iconsFront/bootstrap.png" alt="Bootstrap" title="Bootstrap">
+          </div>
+        </div>
+
+        <div class="skill-column">
+          <h4>Back-End</h4>
+          <div class="column-icons">
+            <img src="assets/images/iconsBack/php.png" alt="PHP" title="PHP">
+            <img src="assets/images/iconsBack/node.png" alt="Node.js" title="Node.js">
+            <img src="assets/images/iconsBack/sql.png" alt="MySQL" title="MySQL">
+            <img src="assets/images/iconsBack/wordpress.png" alt="WordPress" title="WordPress">
+            <img src="assets/images/iconsBack/joomla.png" alt="Joomla" title="Joomla">
+            <img src="assets/images/iconsBack/mongodb.png" alt="MongoDB" title="MongoDB">
+          </div>
+        </div>
+
+        <div class="skill-column">
+          <h4>Mobile</h4>
+          <div class="column-icons">
+            <img src="assets/images/iconsMobile/flutter.png" alt="Flutter" title="Flutter">
+            <img src="assets/images/iconsMobile/kotlin.png" alt="Android" title="Android">
+            <img src="assets/images/iconsMobile/swift.png" alt="iOS" title="iOS">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+
+
+
+
+  <!-- PROYECTOS -->
+  <section class="section" id="progetti">
+    <div class="content">
+      <h2 class="competenze-title">// Progetti</h2>
+      <div class="projects-container">
+        <!-- Proyecto 1 -->
+        <div class="project-card" 
+            data-title="Progetto Js" 
+            data-desc="Questo progetto consiste in una piattaforma web interattiva e dinamica sviluppata con HTML, CSS, JavaScript, Node.js ed MongoDB. L’applicazione offre funzionalità avanzate come gestione del carrello, invio di dati al database, visualizzazione dinamica con Lightbox, integrazione di PDF scaricabili, e contenuti caricati tramite JSON.
+
+            L’obiettivo è fornire un sito moderno, funzionale e professionale, simulando un vero servizio di consulenza, nutrizione e allenamento personalizzato." 
+            data-tech="HTML, CSS, JS, Node.js, MongoDb" 
+            data-web="https://stupendous-sprinkles-5553cd.netlify.app/" 
+            data-github="https://github.com/nchialva/js-dom-practice".
+            data-images="assets/images/screen_git/screenJs/screen1.png,assets/images/screen_git/screenJs/screen2.png,assets/images/screen_git/screenJs/screen3.png,assets/images/screen_git/screenJs/screen4.png">
+            <h4 class="project-title">JavaScript</h4>
+            <img src="assets/images/pro1.png" alt="Progetto Js">
+            <button class="see-more-btn">See More</button>
+        </div>
+        <!-- Proyecto 2 -->
+        <div class="project-card" data-title="Progetto Sql & PHP"    
+        data-desc="Un progetto sviluppato come lavoro finale del corso di PHP. Include l’utilizzo di HTML, CSS, JavaScript, SQL e PHP per la creazione di un sito dinamico e completamente funzionale. Questo progetto mi ha ispirato nella realizzazione del mio portfolio personale, integrando concetti di backend, gestione dei dati e design moderno."
+        data-tech="Html, Css, js, Sql, PHP"
+        data-github="https://github.com/nchialva/portfolio_php_sql"
+        data-images= "assets/images/php/screenHome.png,assets/images/php/loggin.png,assets/images/php/regi.png,assets/images/php/home.png,assets/images/php/profilo.png,assets/images/php/notizie.png,assets/images/php/contatto.png,assets/images/php/competenze2.png,assets/images/php/citazioni.png">
+            <h4 class="project-title">Php, Sql</h4>
+            <img src=" assets/images/php/screenHome.png" alt="Progetto 2">
+            <button class="see-more-btn">See More</button>
+        </div>
+        <!-- Proyecto 3 -->
+        <div class="project-card" 
+            data-title="Html & Css" 
+            data-desc="Un progetto sviluppato come esercitazione per il Master, focalizzato sull'applicazione delle tecniche di HTML5 e CSS3. La landing page è completamente responsive, realizzata con un approccio mobile-first, e utilizza Flexbox e Grid per garantire un layout pulito e moderno. Include inoltre animazioni leggere per migliorare l’esperienza utente."
+            data-tech="HTML, CSS"  
+            data-github="https://github.com/nchialva/basic_html_css_project"
+            data-images="assets/images/screen_git/screenhtml/screen1.png,assets/images/screen_git/screenhtml/screen2.png,assets/images/screen_git/screenhtml/screen3.png,assets/images/screen_git/screenhtml/screen4.png">
+            <h4 class="project-title">Html, Css</h4>
+            <img src="assets/images/pro2.png" alt="Html & Css">
+            <button class="see-more-btn">See More</button>
+        </div>
+        <!-- Proyecto 4 -->
+        <div class="project-card"
+         data-title="Flutter"
+         data-desc="Progetto di un'applicazione social sviluppata con Flutter e Android Studio, che permette agli utenti di caricare foto dei propri animali domestici, interagire con altri utenti e visualizzare feed di immagini in tempo reale."
+         data-tech="Flutter"
+         data-github="https://github.com/nchialva/mi_app_flutter"
+         data-images= "assets/images/flutter/Screenshot 2025-10-26 142249.png,assets/images/flutter/Screenshot 2025-10-26 142311.png,assets/images/flutter/Screenshot 2025-10-26 142336.png,assets/images/flutter/Screenshot 2025-10-26 142357.png">
+            <h4 class="project-title">Flutter</h4>
+            <img src="assets/images/flutter/Screenshot 2025-10-26 142249.png" alt="Flutter">
+            <button class="see-more-btn">See More</button>
+        </div>
+        <!-- Proyecto 5 -->
+        <div class="project-card"
+         data-title="Kotlin"
+        data-desc="Un progetto e-commerce realizzato con Kotlin e Dart in Android Studio, dedicato alla vendita di action figures. Include gestione del catalogo prodotti, carrello interattivo, calcolo automatico del totale e interfaccia mobile-friendly."
+        data-tech="Kotlin"
+        data-github="https://github.com/nchialva/My_app_kotlin"
+        data-images="assets/images/kotlin/1.png,assets/images/kotlin/2.png,assets/images/kotlin/3.png,assets/images/kotlin/4.png,assets/images/kotlin/5.png,assets/images/kotlin/6.png,assets/images/kotlin/7.png,assets/images/kotlin/8.png">
+            <h4 class="project-title">kotlin</h4>
+            <img src="assets/images/kotlin/2.png" alt="Progetto 2">
+            <button class="see-more-btn">See More</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<!-- MODAL LIGHTBOX -->
+<div id="modalProyecto" class="modal">
+  <div class="modal-content">
+    <span class="modal-close">&times;</span>
+    <div class="modal-left">
+      <button class="prev-btn">&#10094;</button>
+      <div class="modal-carousel"></div>
+      <button class="next-btn">&#10095;</button>
+    </div>
+    <div class="modal-right">
+      <h3></h3>
+      <p></p>
+      <div class="modal-tech-icons"></div>
+      <div class="modal-links">
+        <a href="#" class="big-btn" target="_blank">Código</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+  <!-- EXPERIENCIA LABORAL -->
+ <section class="section" id="esperienza">
+  <div class="content">
+    <h2 class="competenze-title">// Esperienza</h2>
+    <div class="experience-container">
+
+      <!-- Santander -->
+      <div class="experience-item styled-experience">
+        <div class="exp-header">
+          <h3>Team Leader & Project Manager</h3>
+          <span>Banca Santander — Buenos Aires, Argentina (2014 - 2018)</span>
+        </div>
+        <p>Progressione dal ruolo di Greeter a Executive Account fino a Team Leader e Project Manager, gestendo conti aziendali, analisi finanziaria e coordinamento di progetti interni per migliorare processi e performance.</p>
+        <div class="exp-skills">
+          <span>Gestione clienti</span>
+          <span>Analisi finanziaria</span>
+          <span>Project management</span>
+          <span>Leadership</span>
+        </div>
+      </div>
+
+      <!-- Itaú -->
+      <div class="experience-item styled-experience">
+        <div class="exp-header">
+          <h3>Executive Account & Project Manager</h3>
+          <span>Banca Itaú — Buenos Aires, Argentina (2018 - 2022)</span>
+        </div>
+        <p>Gestione di conti di grandi aziende, implementazione di sistemi tecnologici per clienti e coordinamento di progetti IT legati a prodotti bancari.</p>
+        <div class="exp-skills">
+          <span>Gestione clienti corporate</span>
+          <span>Implementazione sistemi tecnologici</span>
+          <span>Project management</span>
+          <span>Analisi processi</span>
+        </div>
+      </div>
+
+      <!-- WorkPress Madrid -->
+      <div class="experience-item styled-experience">
+        <div class="exp-header">
+          <h3>Client Solutions Specialist – Digital Projects</h3>
+          <span>WorkPress — Madrid, Spagna (2022 - 2023)</span>
+        </div>
+        <p>Gestione clienti chiave e coordinamento tra cliente e team di sviluppo, assicurando la realizzazione di progetti web secondo le esigenze del cliente.</p>
+        <div class="exp-skills">
+          <span>Gestione clienti</span>
+          <span>Coordinamento sviluppo</span>
+          <span>Project management</span>
+          <span>Comunicazione tecnica</span>
+        </div>
+      </div>
+
+      <!-- Barista Napoli / Torino -->
+      <div class="experience-item styled-experience">
+        <div class="exp-header">
+          <h3>Barista</h3>
+          <span>Napoli, Italia (2023 - 2024) / Torino, Italia (2024 - 2025)</span>
+        </div>
+        <p>Gestione operativa del punto vendita e servizio clienti, sviluppando capacità di lavoro in team e attenzione al dettaglio.</p>
+        <div class="exp-skills">
+          <span>Servizio clienti</span>
+          <span>Gestione operativa</span>
+          <span>Lavoro in team</span>
+          <span>Problem solving</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  
+<script src="./js/main.js"></script>
+<script src="./js/lightbox.js"></script>
+</body>
+</html>
