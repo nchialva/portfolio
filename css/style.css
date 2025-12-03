@@ -259,60 +259,7 @@ nav {
 ============================================================================================================================================================================================= **/
 
 /* HERO */
-.hero {
-  position: relative;
-  min-height: 100vh; 
-  display: flex;
-  flex-direction: column; 
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  overflow: hidden;
-  padding: 20px; 
-}
 
-/* Contenido hero */
-.hero-content {
-  position: relative;
-  z-index: 10;
-  max-width: 1100px;
-  padding: 20px; 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Ajuste responsive para móviles */
-
-@media (max-width: 700px) {
-  .hero {
-    min-height: 80vh; 
-    padding: 40px 20px;
-  }
-
-  .hero-name {
-    font-size: 3rem; 
-    line-height: 1.1;
-  }
-
-  .hero-subtitle {
-    font-size: 1.5rem;
-  }
-
-  .hero-code {
-    font-size: 1.2rem;
-  }
-
-  .hero-buttons {
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  .hero-skills-bar {
-    margin-top: 20px;
-  }
-}
 
 /* Fondo hero más claro */
 
@@ -513,6 +460,60 @@ nav {
   font-style: italic;
 }
 
+
+.hero {
+  position: relative;
+  min-height: 100vh; 
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  padding: 20px; 
+}
+
+/* Contenido hero */
+.hero-content {
+  position: relative;
+  z-index: 10;
+  max-width: 1100px;
+  padding: 20px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Ajuste responsive para móviles */
+
+@media (max-width: 700px) {
+    .hero-name {
+        font-size: clamp(2.5rem, 10vw, 5rem); /* subimos un poco el mínimo y el máximo */
+        line-height: 1.1;
+    }
+
+    .hero-subtitle {
+        font-size: clamp(1.2rem, 4vw, 2rem);
+    }
+
+    .hero-code {
+        font-size: clamp(1rem, 3vw, 1.5rem);
+    }
+
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .hero-skills-bar {
+    margin-top: 20px;
+  }
+}
+
+
+
 /* Flecha scroll hero */
 
 .scroll-down {
@@ -631,7 +632,7 @@ nav {
 ======================================================================================================================================================================================================================== */
 
 /* Título centrado */
-.competenze-title .section-title {
+.competenze-title{
   text-align: center;
   font-size: 2.2rem;
   margin-top: 100px;
@@ -718,6 +719,15 @@ nav {
   background: #f1f1f1;
 }
 
+
+@media (max-width: 700px) {
+    .cert-btn,
+    .skills-btn {
+        font-size: 0.8rem; /* más pequeño que en desktop */
+        padding: 6px 12px; /* reduce el tamaño interno */
+    }
+}
+
 .lightbox {
   display: none;
   position: fixed;
@@ -768,6 +778,28 @@ nav {
 .close-lightbox:hover {
   color: #00c3ff;
   transform: scale(1.2) rotate(90deg);
+}
+.lightbox-content {
+    overflow-y: auto;
+    max-height: 90vh; /* no se pasa de la pantalla */
+}
+
+@media (max-width: 700px) {
+    .lightbox-content {
+        padding: 20px; /* menos espacio interno */
+        max-width: 95%; /* ocupa casi todo el ancho */
+    }
+
+    .lightbox-title {
+        font-size: 1.8rem; /* más pequeño para móviles */
+        margin-bottom: 20px;
+    }
+
+    .close-lightbox {
+        font-size: 2rem; /* un poco más chico */
+        top: 10px;
+        right: 15px;
+    }
 }
 
 @keyframes zoomIn {
@@ -870,7 +902,7 @@ nav {
 }
 
 /* =============================================================================================================================================================================================
-                                                                                  orogetti
+                                                                                  porogetti
 ======================================================================================================================================================================================================================== */
 
 /* GRID DE PROYECTOS */
@@ -938,80 +970,8 @@ nav {
 
 
 /* ===========================
-   LIGHTBOX MODAL
+   LIGHTBOX / MODAL RESPONSIVE
 =========================== */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 100;
-  inset: 0;
-  background: rgba(0,0,0,0.85);
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-}
-
-.modal-content {
-  display: flex;
-  flex-wrap: wrap;
-  background: #111;
-  border-radius: 12px;
-  max-width: 900px;
-  width: 100%;
-  overflow: hidden;
-}
-
-.modal-left {
-  flex: 1 1 50%;
-}
-
-.modal-left img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.modal-right {
-  flex: 1 1 50%;
-  padding: 24px;
-  color: #fff;
-}
-
-.modal-right h3 {
-  font-size: 1.8rem;
-  margin-bottom: 16px;
-}
-
-.modal-right p {
-  margin-bottom: 12px;
-}
-
-.modal-links a {
-  display: inline-block;
-  margin-right: 12px;
-  padding: 8px 12px;
-  border-radius: 6px;
-  background: #007BFF;
-  color: #fff;
-  text-decoration: none;
-  transition: background 0.2s;
-}
-
-.modal-links a:hover {
-  background: #00C0FF;
-}
-
-/* Cerrar modal */
-.modal-close {
-  position: absolute;
-  top: 12px;
-  right: 20px;
-  font-size: 2rem;
-  cursor: pointer;
-  color: #fff;
-}
-
-/* Modal fondo */
 .modal {
   display: none;
   position: fixed;
@@ -1021,30 +981,28 @@ nav {
   justify-content: center;
   align-items: center;
   padding: 20px;
-  font-family: 'Poppins', sans-serif; 
+  font-family: 'Poppins', sans-serif;
+  overflow-y: auto; /* scroll si el contenido es grande */
 }
 
-/* Contenido */
 .modal-content {
   display: flex;
   flex-wrap: wrap;
   background: #111;
   border-radius: 20px;
-  max-width: 1200px;   
-  width: 95%;          
-  height: 80vh;       
-  overflow: hidden;
+  max-width: 1200px;
+  width: 95%;
+  max-height: 90vh; /* evita que se salga de la pantalla */
+  overflow-y: auto; /* scroll interno */
   box-shadow: 0 15px 40px rgba(0,0,0,0.6);
   transform: translateY(-20px);
   transition: transform 0.4s, opacity 0.4s;
-  font-family: 'Poppins', sans-serif;
 }
 
 /* Left (imagen) */
 .modal-left {
   flex: 1 1 50%;
 }
-
 .modal-left img {
   width: 100%;
   height: 100%;
@@ -1058,36 +1016,32 @@ nav {
   padding: 40px;
   color: #fff;
 }
-
 .modal-right h3 {
   font-size: 2.2rem;
   margin-bottom: 18px;
   font-weight: 700;
 }
-
 .modal-right p {
   font-size: 1.2rem;
   margin-bottom: 24px;
   line-height: 1.6;
 }
 
+/* Iconos y botones */
 .modal-tech-icons {
   display: flex;
   gap: 16px;
   margin-bottom: 28px;
 }
-
 .modal-tech-icons img {
   width: 60px;
   height: 60px;
 }
-
-/* Botones grandes */
 .modal-links {
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
 }
-
 .modal-links .big-btn {
   padding: 16px 26px;
   border-radius: 10px;
@@ -1098,7 +1052,6 @@ nav {
   font-size: 1.1rem;
   transition: background 0.3s, transform 0.2s;
 }
-
 .modal-links .big-btn:hover {
   background: #00C0FF;
   transform: translateY(-3px);
@@ -1114,14 +1067,72 @@ nav {
   color: #fff;
 }
 
-/* Responsive */
+/* Contenedor de proyectos */
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;  /* permite que las tarjetas bajen de fila en móvil */
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Tarjetas de proyectos */
+.project-card {
+  flex: 1 1 300px;  /* mínimo 300px por tarjeta */
+  max-width: 350px; /* opcional: no se agrande demasiado */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: #111;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Imágenes dentro de la tarjeta */
+.project-card img {
+  width: 100%;
+  height: auto; /* mantiene proporción */
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+/* Botón */
+.see-more-btn {
+  padding: 10px 16px;
+  font-size: 0.9rem;
+  margin-top: 8px;
+}
+
+/* Responsive para móviles */
+@media (max-width: 700px) {
+  .projects-container {
+    gap: 12px;
+  }
+  .project-card {
+    flex: 1 1 100%; /* cada tarjeta ocupa toda la fila */
+    max-width: 100%;
+  }
+  .project-card img {
+    max-height: 200px; /* opcional para que no quede gigante */
+    object-fit: cover;
+  }
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
 @media (max-width: 900px) {
   .modal-content {
     flex-direction: column;
-    height: auto;
+    max-height: 95vh;
   }
   .modal-left, .modal-right {
     flex: 1 1 100%;
+  }
+  .modal-left img {
+    border-radius: 20px 20px 0 0;
+    height: auto; /* mantiene proporción de la imagen */
   }
   .modal-right {
     padding: 24px;
@@ -1134,8 +1145,49 @@ nav {
     flex-direction: column;
     gap: 12px;
   }
+  .modal-links .big-btn {
+    font-size: 1rem;
+    padding: 12px 20px;
+  }
+  .modal-close {
+    font-size: 2.5rem;
+    top: 12px;
+    right: 16px;
+  }
 }
 
+/* RESPONSIVE PARA PANTALLAS PEQUEÑAS */
+@media (max-width: 700px) {
+  .modal-content {
+    flex-direction: column;
+    max-height: 95vh;
+  }
+  .modal-left, .modal-right {
+    flex: 1 1 100%;
+  }
+  .modal-left img {
+    border-radius: 20px 20px 0 0;
+    height: auto;
+  }
+  .modal-right {
+    padding: 16px;
+  }
+  .modal-right h3 {
+    font-size: 1.5rem;
+  }
+  .modal-right p {
+    font-size: 0.95rem;
+  }
+  .modal-links .big-btn {
+    font-size: 0.9rem;
+    padding: 10px 16px;
+  }
+  .modal-close {
+    font-size: 2rem;
+    top: 8px;
+    right: 12px;
+  }
+}
 
 /* ===========================
    MEDIA QUERIES - RESPONSIVE
